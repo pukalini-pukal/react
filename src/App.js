@@ -14,13 +14,28 @@ function App() {
     return <div>{props.children}</div>
   }
 
+  const element = React.createElement(
+    "button",
+    {
+      className:"btn",
+      onClick:() => alert("Clicked!"),
+
+    },
+    "Click Me"
+  );
+
   return(
-    <welcome>
-      <ul>
-        <li><a href="#"/></li>
-      </ul>
-    
-      </welcome>
+    <div>
+      <welcome>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+          <p>Welcome</p>
+          {theme}
+        </ul>
+      <div>{element}</div>
+        </welcome>
+      </div>
   )
 
 }
